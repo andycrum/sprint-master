@@ -1,0 +1,6 @@
+{% for issue_group in issue_groups %}
+
+{{issue_group[0]}}
+{% for issue in issue_group[1] %}
+{% if issue.important? %}*{% endif %}- {{issue.summary}} {% if issue.bug? %}({{issue.key}}){% endif %}{% endfor %}{% endfor %}
+

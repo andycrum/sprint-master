@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+require 'optparse'
+require './lib/sprint_master'
+
+# Parse script arguments
+options = {}
+OptionParser.new do |parser|
+  parser.banner = 'Usage: sprint_master [options]'
+  parser.on(
+    '-s',
+    '--sprint <sprint id>',
+    Integer,
+    'Run for a specific sprint') do |id|
+    options[:sprint_id] = id
+  end
+end.parse!
+
+# Run it
+SprintMaster.run(options)

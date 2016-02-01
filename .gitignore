@@ -1,0 +1,4 @@
+.DS_Store
+Gemfile.lock
+config/configuration.rb
+output/
