@@ -18,7 +18,7 @@ SprintMaster will output the plaintext information to whatever is specified in `
 ### Options
 Parameter | Description
 ------------ | -------------
--s, --sprint <sprint id> | Run for a specific sprint
+`-s/--sprint <sprint id>` | Run for a specific sprint
 
 ## Contributing
 Feel free to open issues or pull requests for any errors you run into or features you think should exist.
