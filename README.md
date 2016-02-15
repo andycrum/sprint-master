@@ -9,14 +9,14 @@ To use SprintMaster, you'll need an instance of JIRA running on Atlassian Cloud.
 2. Edit `config/configuration.rb.example`, add your own values, and remove the `.example` file extension
 3. Run `bin/sprint_master`
 
-## Running
+## Basic Usage
 To run Sprintmaster, run `bin/sprint_master`. By default, it will run for the first currently active sprint that it finds (you can run it for a specific sprint by using the `-s` parameter, described below).
 
 ### Output
 SprintMaster will output the plaintext information to whatever is specified in `OUTPUT_FILES[:email]` in your `configuration.rb` file, and a CSV of the sprint issues to whatever is specified in `OUTPUT_FILES[:csv]`. To aid in debugging, it also prints out the plaintext information generated when you run the script.
 
 ### Options
-Parameter | Description
+Command Flag | Description
 ------------ | -------------
 `-s/--sprint <sprint id>` | Run for a specific sprint
 
