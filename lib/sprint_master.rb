@@ -16,6 +16,8 @@ module SprintMaster
       # Write issues to email template
       issue_groups = generate_issue_groups(issues)
       puts SprintMaster::EmailWriter.new.write('issue_groups' => issue_groups)
+
+      echo_success_message
     end
 
     private
@@ -30,6 +32,14 @@ module SprintMaster
         issue_groups[group_title] << i
       end
       issue_groups
+    end
+
+    # Writes a success message
+    def echo_success_message
+      puts "-----------------------\n"
+      puts "Saved CSV output in #{Configuration::OUTPUT_FILES[:csv]}\n"
+      puts "Saved plaintext output in #{Configuration::OUTPUT_FILES[:email]}\n"
+      puts "-----------------------\n"
     end
   end
 end
